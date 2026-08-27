@@ -27,5 +27,12 @@ jobs:
           cache: pnpm
 
       # BEGIN
-      # Set the project up, run the linter and run the tests.
+      - name: Setup project
+        run: make setup
+
+      - name: Run linter
+        run: make lint
+
+      - name: Run tests
+        run: make test
       # END
